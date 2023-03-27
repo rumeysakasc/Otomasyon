@@ -47,6 +47,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.button1);
@@ -152,7 +153,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(707, 699);
+            this.ClientSize = new System.Drawing.Size(707, 753);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
             this.Text = "KÜTÜPHANE TAKİP";

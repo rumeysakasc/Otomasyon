@@ -119,6 +119,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="yeniKayit.resx">
       <DependentUpon>yeniKayit.cs</DependentUpon>
@@ -158,6 +159,10 @@
       <DependentUpon>DataBase.edmx</DependentUpon>
       <LastGenOutput>DataBase.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\minimize.png" />
+    <None Include="Resources\new-window.png" />
+    <None Include="Resources\minus.png" />
+    <None Include="Resources\close.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
