@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,9 @@ namespace NküOtomasyon
 {
     public partial class İslemler : Form
     {
+        SqlConnection ktpBgl;
+        SqlCommand komutKitap;
+        SqlDataAdapter adapterK;
         public İslemler()
         {
             InitializeComponent();
@@ -21,10 +25,21 @@ namespace NküOtomasyon
         {
 
         }
-
+        private void kitapListe()
+        {
+            ktpBgl = new SqlConnection("Data Source=DESKTOP-0SG48DE;Initial Catalog=KutuphaneOto;Integrated Security=True");
+            ktpBgl.Open();
+            adapterK = new SqlDataAdapter("SELECT * FROM kitapListele", ktpBgl);
+            DataTable dt = new DataTable();
+            adapterK.Fill(dt);
+            dataGridView1.DataSource = dt;
+            ktpBgl.Close();
+        }
         private void İslemler_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle= FormBorderStyle.None; 
+            
+            this.FormBorderStyle= FormBorderStyle.None;
+            kitapListe();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -49,14 +64,69 @@ namespace NküOtomasyon
             
         }
 
-        private void btmin_Click(object sender, EventArgs e)
+      
+
+        private void button7_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            added1.Visible = false;
+            dataGridView1.Visible = true;
+            panel4.Visible = false;
+            label1.Visible = false;
+            label2.Visible = true;
+            if (anaS.Focused == true)
+            {
+                anaS.BackColor = Color.DarkSlateGray;
+                ekleSil.BackColor = panel2.BackColor;
+                odunc.BackColor = panel2.BackColor;
+            }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            dataGridView1.Visible = false;  
+            added1.Visible = true;
+            panel4.Visible = true;
+            label1.Visible = true;
+            label2.Visible = false;
+            if (ekleSil.Focused == true)
+            {
+                ekleSil.BackColor = Color.DarkSlateGray;
+                anaS.BackColor = panel2.BackColor;
+                odunc.BackColor = panel2.BackColor;
+            }
+            
+        }
+
+        private void added1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (odunc.Focused == true)
+            {
+                odunc.BackColor = Color.DarkSlateGray;
+                anaS.BackColor = panel2.BackColor;
+                ekleSil.BackColor = panel2.BackColor;
+            }
         }
     }
 }

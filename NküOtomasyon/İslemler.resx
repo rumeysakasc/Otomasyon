@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="kAra.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
         MAAA6mAAADqYAAAXcJy6UTwAAASxSURBVFhHzVVrTJNXGD7bYD8G+yFNJuDmwCyg24A/4EiKMYAsAk5F
@@ -144,10 +144,10 @@
         wRKwHJdwZid2RAsVkWYayaJnEYT8C1UDTkaFOtFuAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="teslim.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKXSURBVFhH7VU9
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKXSURBVFhH7VU9
         jE1BFB6CigYlCoVGoiAqIQpEaNQKhWUTorPZDTLzZgvJk4goqXaDIJv42TfnPhLFNsImNkSlYDdRIArr
         p9hE/KzvzDv3571777vP5T2K/ZIvM/fcM+c7c+ZPLeD/h3V7lKGhrlAHR0SlDTRNwHka7YNMGnqBdi6H
         b8G8cVPgT1FpA5+As/KVhg02INAcON/CH0q7Q+KVhnU7vZ+HcVfigegnUZRAWTQlcObuWmVpl6fv19dA
@@ -162,7 +162,7 @@
         +PgAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="odunc.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
         MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnAxsSMQY3sf5NAAACqklEQVRYR72Yv2sUQRTHV9FORDsL
@@ -180,7 +180,7 @@
         /wBO0hXoEv3BCQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ekleSil.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
         MAAA6mAAADqYAAAXcJy6UTwAAAAHdElNRQfnAxsSKzahRTQ6AAAEb0lEQVRYR82VXUxTZxjHu2zZplnM
@@ -205,10 +205,10 @@
         5tWAWpyap67sInkj4TuCq2mm+1LzVI+uadr+JlSeR2k0/wNLLG6g4bPoAgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="anaS.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        6gAAAOoB+Ss1JgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAZxSURBVFhHrZdr
+        4wAAAOMBD+bfpwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAZxSURBVFhHrZdr
         TJNXGMdfszm3KYn7AGgyaUtvlJbSchEEgaJ+MVtM9gEsTjRD1GUJkagwpsDKHQVBKrcWEK0gs1yiX8hK
         C6WUXriL3Cq3gmbDiqAFNcwPsufVkyKhFIj8kjfp+T/0zZ9znssptl78Yw12XjHGMJ/zk2Lf6KftvlH/
         PN/329Q7v7Omd/sjp58HRMy0BZyYFfPCzXz/iGk79LXPxzNtcDc3YbjI4/LonHfceIt37MQFn/NGX7+L
@@ -242,7 +242,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAH
-        YAAAB2ABR4RaUgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAIb8SURBVHhe7Z0H
+        XgAAB14BODEn8gAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAIb8SURBVHhe7Z0H
         eFTV1v79vu/+79e/W/V6VfBaURGV3nuxYkGp0nsnoSo1Ioi90aV3pQgqvbeQRiAJJYT0hJAESO91/d+1
         z94zZ2b2JBMIot6znuf37LNPmZLM++619jlz5i4rrLDCCiussMIKK6ywwgorrLDCCiussMIKK6ywwgor
         rLDCCiussMIKK6ywwgorrLDCCiussMIKK6ywwgorrLDCCiussMIKK6ywwgorrLDCCiussMIKK6ywwgor
