@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="KutuphaneOtoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="kayit">
+          <Key>
+            <PropertyRef Name="kayit_no" />
+          </Key>
+          <Property Name="kayit_no" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tc" Type="nvarchar" MaxLength="11" />
+          <Property Name="ad" Type="nvarchar" MaxLength="50" />
+          <Property Name="soyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="tel" Type="nvarchar" MaxLength="50" />
+          <Property Name="kullanici_adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="sifre" Type="nvarchar" MaxLength="50" />
+          <Property Name="adres" Type="nvarchar" MaxLength="50" />
+          <Property Name="foto" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="kitapAra">
+          <Key>
+            <PropertyRef Name="barkod_no" />
+          </Key>
+          <Property Name="barkod_no" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kitap_adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="kitap_yazari" Type="nvarchar" MaxLength="50" />
+          <Property Name="yayin_evi" Type="nvarchar" MaxLength="50" />
+          <Property Name="kitap_turu" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="kitapListele">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kitap_adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="kitap_yazari" Type="nvarchar" MaxLength="50" />
+          <Property Name="kitap_turu" Type="nvarchar" MaxLength="50" />
+          <Property Name="baski_yili" Type="int" />
+          <Property Name="sayfa_sayisi" Type="int" />
+          <Property Name="aciklama" Type="nvarchar" MaxLength="50" />
+          <Property Name="nerede" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Listeleme">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kitap_adi" Type="varchar(max)" />
+          <Property Name="kitap_yazari" Type="nvarchar" MaxLength="50" />
+          <Property Name="kitap_turu" Type="nvarchar" MaxLength="50" />
+          <Property Name="yayin_evi" Type="nvarchar" MaxLength="50" />
+          <Property Name="sayfa_sayisi" Type="nvarchar" MaxLength="50" />
+          <Property Name="aciklama" Type="nvarchar" MaxLength="50" />
+          <Property Name="nerede" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'KutuphaneOto.dbo.new_kayit' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="new_kayit">
+          <Key>
+            <PropertyRef Name="tc" />
+          </Key>
+          <Property Name="kayit_no" Type="int" />
+          <Property Name="tc" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ad" Type="nvarchar" MaxLength="50" />
+          <Property Name="soyAd" Type="nvarchar" MaxLength="50" />
+          <Property Name="tel" Type="int" />
+          <Property Name="kullanici_adi" Type="nvarchar" MaxLength="50" />
+          <Property Name="sifre" Type="nvarchar" MaxLength="50" />
+          <Property Name="adres" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="personel">
+          <Key>
+            <PropertyRef Name="personel_id" />
+          </Key>
+          <Property Name="personel_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personel_ad" Type="nvarchar" MaxLength="50" />
+          <Property Name="personel_soyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="personel_tc" Type="nvarchar" MaxLength="11" />
+          <Property Name="personel_tel" Type="nchar" MaxLength="10" />
+          <Property Name="personel_mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="personel_kAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="personel_sifre" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="KutuphaneOtoModelStoreContainer">
+          <EntitySet Name="kayit" EntityType="Self.kayit" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kitapAra" EntityType="Self.kitapAra" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kitapListele" EntityType="Self.kitapListele" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Listeleme" EntityType="Self.Listeleme" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="personel" EntityType="Self.personel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="new_kayit" EntityType="Self.new_kayit" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [new_kayit].[kayit_no] AS [kayit_no], 
+    [new_kayit].[tc] AS [tc], 
+    [new_kayit].[ad] AS [ad], 
+    [new_kayit].[soyAd] AS [soyAd], 
+    [new_kayit].[tel] AS [tel], 
+    [new_kayit].[kullanici_adi] AS [kullanici_adi], 
+    [new_kayit].[sifre] AS [sifre], 
+    [new_kayit].[adres] AS [adres]
+    FROM [dbo].[new_kayit] AS [new_kayit]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KutuphaneOtoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="kayit">
+          <Key>
+            <PropertyRef Name="kayit_no" />
+          </Key>
+          <Property Name="kayit_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tc" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kullanici_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="foto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="kitapAra">
+          <Key>
+            <PropertyRef Name="barkod_no" />
+          </Key>
+          <Property Name="barkod_no" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kitap_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kitap_yazari" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="yayin_evi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kitap_turu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="kitapListele">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kitap_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kitap_yazari" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kitap_turu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="baski_yili" Type="Int32" />
+          <Property Name="sayfa_sayisi" Type="Int32" />
+          <Property Name="aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nerede" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Listeleme">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kitap_adi" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="kitap_yazari" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kitap_turu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="yayin_evi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sayfa_sayisi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="aciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="nerede" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="personel">
+          <Key>
+            <PropertyRef Name="personel_id" />
+          </Key>
+          <Property Name="personel_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personel_ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="personel_soyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="personel_tc" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="personel_tel" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="personel_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="personel_kAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="personel_sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="new_kayit">
+          <Key>
+            <PropertyRef Name="tc" />
+          </Key>
+          <Property Name="kayit_no" Type="Int32" />
+          <Property Name="tc" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="soyAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="tel" Type="Int32" />
+          <Property Name="kullanici_adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="adres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="KutuphaneOtoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="kayit" EntityType="Self.kayit" />
+          <EntitySet Name="kitapAra" EntityType="Self.kitapAra" />
+          <EntitySet Name="kitapListele" EntityType="Self.kitapListele" />
+          <EntitySet Name="Listeleme" EntityType="Self.Listeleme" />
+          <EntitySet Name="personel" EntityType="Self.personel" />
+          <EntitySet Name="new_kayit" EntityType="Self.new_kayit" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KutuphaneOtoModelStoreContainer" CdmEntityContainer="KutuphaneOtoEntities">
+          <EntitySetMapping Name="kayit">
+            <EntityTypeMapping TypeName="KutuphaneOtoModel.kayit">
+              <MappingFragment StoreEntitySet="kayit">
+                <ScalarProperty Name="kayit_no" ColumnName="kayit_no" />
+                <ScalarProperty Name="tc" ColumnName="tc" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="soyad" ColumnName="soyad" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="kullanici_adi" ColumnName="kullanici_adi" />
+                <ScalarProperty Name="sifre" ColumnName="sifre" />
+                <ScalarProperty Name="adres" ColumnName="adres" />
+                <ScalarProperty Name="foto" ColumnName="foto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kitapAra">
+            <EntityTypeMapping TypeName="KutuphaneOtoModel.kitapAra">
+              <MappingFragment StoreEntitySet="kitapAra">
+                <ScalarProperty Name="barkod_no" ColumnName="barkod_no" />
+                <ScalarProperty Name="kitap_adi" ColumnName="kitap_adi" />
+                <ScalarProperty Name="kitap_yazari" ColumnName="kitap_yazari" />
+                <ScalarProperty Name="yayin_evi" ColumnName="yayin_evi" />
+                <ScalarProperty Name="kitap_turu" ColumnName="kitap_turu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kitapListele">
+            <EntityTypeMapping TypeName="KutuphaneOtoModel.kitapListele">
+              <MappingFragment StoreEntitySet="kitapListele">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="kitap_adi" ColumnName="kitap_adi" />
+                <ScalarProperty Name="kitap_yazari" ColumnName="kitap_yazari" />
+                <ScalarProperty Name="kitap_turu" ColumnName="kitap_turu" />
+                <ScalarProperty Name="baski_yili" ColumnName="baski_yili" />
+                <ScalarProperty Name="sayfa_sayisi" ColumnName="sayfa_sayisi" />
+                <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+                <ScalarProperty Name="nerede" ColumnName="nerede" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Listeleme">
+            <EntityTypeMapping TypeName="KutuphaneOtoModel.Listeleme">
+              <MappingFragment StoreEntitySet="Listeleme">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="kitap_adi" ColumnName="kitap_adi" />
+                <ScalarProperty Name="kitap_yazari" ColumnName="kitap_yazari" />
+                <ScalarProperty Name="kitap_turu" ColumnName="kitap_turu" />
+                <ScalarProperty Name="yayin_evi" ColumnName="yayin_evi" />
+                <ScalarProperty Name="sayfa_sayisi" ColumnName="sayfa_sayisi" />
+                <ScalarProperty Name="aciklama" ColumnName="aciklama" />
+                <ScalarProperty Name="nerede" ColumnName="nerede" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="personel">
+            <EntityTypeMapping TypeName="KutuphaneOtoModel.personel">
+              <MappingFragment StoreEntitySet="personel">
+                <ScalarProperty Name="personel_id" ColumnName="personel_id" />
+                <ScalarProperty Name="personel_ad" ColumnName="personel_ad" />
+                <ScalarProperty Name="personel_soyad" ColumnName="personel_soyad" />
+                <ScalarProperty Name="personel_tc" ColumnName="personel_tc" />
+                <ScalarProperty Name="personel_tel" ColumnName="personel_tel" />
+                <ScalarProperty Name="personel_mail" ColumnName="personel_mail" />
+                <ScalarProperty Name="personel_kAdi" ColumnName="personel_kAdi" />
+                <ScalarProperty Name="personel_sifre" ColumnName="personel_sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="new_kayit">
+            <EntityTypeMapping TypeName="KutuphaneOtoModel.new_kayit">
+              <MappingFragment StoreEntitySet="new_kayit">
+                <ScalarProperty Name="kayit_no" ColumnName="kayit_no" />
+                <ScalarProperty Name="tc" ColumnName="tc" />
+                <ScalarProperty Name="ad" ColumnName="ad" />
+                <ScalarProperty Name="soyAd" ColumnName="soyAd" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="kullanici_adi" ColumnName="kullanici_adi" />
+                <ScalarProperty Name="sifre" ColumnName="sifre" />
+                <ScalarProperty Name="adres" ColumnName="adres" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
