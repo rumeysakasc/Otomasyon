@@ -53,7 +53,7 @@ namespace NküOtomasyon
             btmax.Visible = false;
             btmaxed.Location = btmax.Location;
             btmaxed.Visible = true;
-           
+            
         }
 
         private void btmaxed_Click(object sender, EventArgs e)
@@ -127,6 +127,50 @@ namespace NküOtomasyon
                 anaS.BackColor = panel2.BackColor;
                 ekleSil.BackColor = panel2.BackColor;
             }
+        }
+
+        private void added1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private bool isDragging = false;
+        private Point lastLocation;
+        private void İslemler_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+        private void İslemler_MouseMove(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        
+
+        private void İslemler_MouseUp(object sender, MouseEventArgs e)
+        {
+           
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            isDragging = true;
+            lastLocation = e.Location;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isDragging)
+            {
+                int dx = e.Location.X - lastLocation.X;
+                int dy = e.Location.Y - lastLocation.Y;
+                this.Location = new Point(this.Location.X + dx, this.Location.Y + dy);
+            }
+        }
+
+        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            isDragging = false;
         }
     }
 }

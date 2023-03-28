@@ -42,6 +42,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -97,6 +98,12 @@
     <Compile Include="new_kayit.cs">
       <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
+    <Compile Include="oduncVer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="oduncVer.Designer.cs">
+      <DependentUpon>oduncVer.cs</DependentUpon>
+    </Compile>
     <Compile Include="personel.cs">
       <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
@@ -131,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oduncVer.resx">
+      <DependentUpon>oduncVer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

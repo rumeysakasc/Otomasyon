@@ -33,7 +33,7 @@
             this.search = new System.Windows.Forms.Button();
             this.yayinEvi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.id = new System.Windows.Forms.TextBox();
+            this.idNo = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tur = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,12 +48,13 @@
             this.nerede = new System.Windows.Forms.ComboBox();
             this.kYazar = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.gorntu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(360, 284);
+            this.button1.Location = new System.Drawing.Point(240, 284);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 23);
             this.button1.TabIndex = 21;
@@ -66,17 +67,19 @@
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(31, 338);
+            this.dataGridView2.Location = new System.Drawing.Point(31, 355);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(776, 399);
+            this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.dataGridView2.Size = new System.Drawing.Size(776, 385);
             this.dataGridView2.TabIndex = 20;
+            this.dataGridView2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEnter);
             // 
             // search
             // 
-            this.search.Location = new System.Drawing.Point(151, 284);
+            this.search.Location = new System.Drawing.Point(63, 284);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(133, 23);
             this.search.TabIndex = 19;
@@ -100,13 +103,13 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "Yayın Evi:";
             // 
-            // id
+            // idNo
             // 
-            this.id.Enabled = false;
-            this.id.Location = new System.Drawing.Point(151, 50);
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(206, 22);
-            this.id.TabIndex = 16;
+            this.idNo.Enabled = false;
+            this.idNo.Location = new System.Drawing.Point(151, 50);
+            this.idNo.Name = "idNo";
+            this.idNo.Size = new System.Drawing.Size(206, 22);
+            this.idNo.TabIndex = 16;
             // 
             // label3
             // 
@@ -183,7 +186,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(569, 284);
+            this.button2.Location = new System.Drawing.Point(417, 284);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(133, 23);
             this.button2.TabIndex = 26;
@@ -203,6 +206,10 @@
             // nerede
             // 
             this.nerede.FormattingEnabled = true;
+            this.nerede.Items.AddRange(new object[] {
+            "",
+            "Raf",
+            "Okuyucu"});
             this.nerede.Location = new System.Drawing.Point(505, 225);
             this.nerede.Name = "nerede";
             this.nerede.Size = new System.Drawing.Size(153, 24);
@@ -225,10 +232,21 @@
             this.label8.TabIndex = 30;
             this.label8.Text = "Kitap Yazarı:";
             // 
+            // gorntu
+            // 
+            this.gorntu.Location = new System.Drawing.Point(598, 284);
+            this.gorntu.Name = "gorntu";
+            this.gorntu.Size = new System.Drawing.Size(133, 23);
+            this.gorntu.TabIndex = 32;
+            this.gorntu.Text = "GÖRÜNTÜLE";
+            this.gorntu.UseVisualStyleBackColor = true;
+            this.gorntu.Click += new System.EventHandler(this.gorntu_Click);
+            // 
             // added
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.gorntu);
             this.Controls.Add(this.kYazar);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.nerede);
@@ -243,7 +261,7 @@
             this.Controls.Add(this.search);
             this.Controls.Add(this.yayinEvi);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.id);
+            this.Controls.Add(this.idNo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.tur);
             this.Controls.Add(this.label2);
@@ -251,6 +269,7 @@
             this.Controls.Add(this.label1);
             this.Name = "added";
             this.Size = new System.Drawing.Size(853, 762);
+            this.Load += new System.EventHandler(this.added_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -264,7 +283,7 @@
         private System.Windows.Forms.Button search;
         private System.Windows.Forms.TextBox yayinEvi;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox id;
+        private System.Windows.Forms.TextBox idNo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tur;
         private System.Windows.Forms.Label label2;
@@ -279,5 +298,6 @@
         private System.Windows.Forms.ComboBox nerede;
         private System.Windows.Forms.TextBox kYazar;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button gorntu;
     }
 }
