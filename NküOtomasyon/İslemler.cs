@@ -78,6 +78,7 @@ namespace NküOtomasyon
             panel4.Visible = false;
             label1.Visible = false;
             label2.Visible = true;
+            oduncVer1.Visible = false;
             if (anaS.Focused == true)
             {
                 anaS.BackColor = Color.DarkSlateGray;
@@ -100,6 +101,7 @@ namespace NküOtomasyon
             panel4.Visible = true;
             label1.Visible = true;
             label2.Visible = false;
+            oduncVer1.Visible = false;
             if (ekleSil.Focused == true)
             {
                 ekleSil.BackColor = Color.DarkSlateGray;
@@ -121,6 +123,7 @@ namespace NküOtomasyon
 
         private void button3_Click(object sender, EventArgs e)
         {
+            oduncVer1.Visible = true;
             if (odunc.Focused == true)
             {
                 odunc.BackColor = Color.DarkSlateGray;
@@ -171,6 +174,11 @@ namespace NküOtomasyon
         private void panel1_MouseUp(object sender, MouseEventArgs e)
         {
             isDragging = false;
+        }
+
+        private void oduncVer1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -145,5 +145,10 @@ namespace NküOtomasyon
         {
 
         }
+
+        private void idNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

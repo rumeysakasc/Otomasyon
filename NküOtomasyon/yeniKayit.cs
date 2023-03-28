@@ -46,6 +46,7 @@ namespace NküOtomasyon
             kAdi.Clear();
             sifre.Clear();
             adrs.Clear();
+            
         }
         private void yeniKayit_Load(object sender, EventArgs e)
         {

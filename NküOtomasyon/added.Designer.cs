@@ -54,9 +54,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(240, 284);
+            this.button1.Location = new System.Drawing.Point(277, 291);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 23);
+            this.button1.Size = new System.Drawing.Size(166, 23);
             this.button1.TabIndex = 21;
             this.button1.Text = "SİL";
             this.button1.UseVisualStyleBackColor = true;
@@ -73,15 +73,15 @@
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.dataGridView2.Size = new System.Drawing.Size(776, 385);
+            this.dataGridView2.Size = new System.Drawing.Size(851, 385);
             this.dataGridView2.TabIndex = 20;
             this.dataGridView2.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellEnter);
             // 
             // search
             // 
-            this.search.Location = new System.Drawing.Point(63, 284);
+            this.search.Location = new System.Drawing.Point(100, 291);
             this.search.Name = "search";
-            this.search.Size = new System.Drawing.Size(133, 23);
+            this.search.Size = new System.Drawing.Size(166, 23);
             this.search.TabIndex = 19;
             this.search.Text = "EKLE";
             this.search.UseVisualStyleBackColor = true;
@@ -91,7 +91,7 @@
             // 
             this.yayinEvi.Location = new System.Drawing.Point(501, 105);
             this.yayinEvi.Name = "yayinEvi";
-            this.yayinEvi.Size = new System.Drawing.Size(206, 22);
+            this.yayinEvi.Size = new System.Drawing.Size(263, 22);
             this.yayinEvi.TabIndex = 18;
             // 
             // label4
@@ -108,8 +108,9 @@
             this.idNo.Enabled = false;
             this.idNo.Location = new System.Drawing.Point(151, 50);
             this.idNo.Name = "idNo";
-            this.idNo.Size = new System.Drawing.Size(206, 22);
+            this.idNo.Size = new System.Drawing.Size(250, 22);
             this.idNo.TabIndex = 16;
+            this.idNo.TextChanged += new System.EventHandler(this.idNo_TextChanged);
             // 
             // label3
             // 
@@ -124,7 +125,7 @@
             // 
             this.tur.Location = new System.Drawing.Point(151, 168);
             this.tur.Name = "tur";
-            this.tur.Size = new System.Drawing.Size(206, 22);
+            this.tur.Size = new System.Drawing.Size(250, 22);
             this.tur.TabIndex = 14;
             // 
             // label2
@@ -140,7 +141,7 @@
             // 
             this.kitapAdi.Location = new System.Drawing.Point(151, 108);
             this.kitapAdi.Name = "kitapAdi";
-            this.kitapAdi.Size = new System.Drawing.Size(206, 22);
+            this.kitapAdi.Size = new System.Drawing.Size(250, 22);
             this.kitapAdi.TabIndex = 12;
             // 
             // label1
@@ -156,7 +157,7 @@
             // 
             this.baski.Location = new System.Drawing.Point(151, 225);
             this.baski.Name = "baski";
-            this.baski.Size = new System.Drawing.Size(206, 22);
+            this.baski.Size = new System.Drawing.Size(250, 22);
             this.baski.TabIndex = 23;
             // 
             // label5
@@ -172,7 +173,7 @@
             // 
             this.sayfa.Location = new System.Drawing.Point(501, 168);
             this.sayfa.Name = "sayfa";
-            this.sayfa.Size = new System.Drawing.Size(206, 22);
+            this.sayfa.Size = new System.Drawing.Size(263, 22);
             this.sayfa.TabIndex = 25;
             // 
             // label6
@@ -186,9 +187,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(417, 284);
+            this.button2.Location = new System.Drawing.Point(454, 291);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 23);
+            this.button2.Size = new System.Drawing.Size(166, 23);
             this.button2.TabIndex = 26;
             this.button2.Text = "GÜNCELLE";
             this.button2.UseVisualStyleBackColor = true;
@@ -212,7 +213,7 @@
             "Okuyucu"});
             this.nerede.Location = new System.Drawing.Point(505, 225);
             this.nerede.Name = "nerede";
-            this.nerede.Size = new System.Drawing.Size(153, 24);
+            this.nerede.Size = new System.Drawing.Size(210, 24);
             this.nerede.TabIndex = 29;
             this.nerede.SelectedIndexChanged += new System.EventHandler(this.nerede_SelectedIndexChanged);
             // 
@@ -220,7 +221,7 @@
             // 
             this.kYazar.Location = new System.Drawing.Point(501, 50);
             this.kYazar.Name = "kYazar";
-            this.kYazar.Size = new System.Drawing.Size(206, 22);
+            this.kYazar.Size = new System.Drawing.Size(263, 22);
             this.kYazar.TabIndex = 31;
             // 
             // label8
@@ -234,9 +235,9 @@
             // 
             // gorntu
             // 
-            this.gorntu.Location = new System.Drawing.Point(598, 284);
+            this.gorntu.Location = new System.Drawing.Point(635, 291);
             this.gorntu.Name = "gorntu";
-            this.gorntu.Size = new System.Drawing.Size(133, 23);
+            this.gorntu.Size = new System.Drawing.Size(166, 23);
             this.gorntu.TabIndex = 32;
             this.gorntu.Text = "GÖRÜNTÜLE";
             this.gorntu.UseVisualStyleBackColor = true;
@@ -268,7 +269,7 @@
             this.Controls.Add(this.kitapAdi);
             this.Controls.Add(this.label1);
             this.Name = "added";
-            this.Size = new System.Drawing.Size(853, 762);
+            this.Size = new System.Drawing.Size(906, 762);
             this.Load += new System.EventHandler(this.added_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
