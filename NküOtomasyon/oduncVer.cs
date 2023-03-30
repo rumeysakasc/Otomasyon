@@ -39,6 +39,8 @@ namespace NküOtomasyon
         {
             idn.Clear();
             secilenK.Clear();
+            ara.Clear();
+            
         }
         private void gridV_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
@@ -62,13 +64,14 @@ namespace NküOtomasyon
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ekleme.Open();
+            
             
             
             ekleme = new SqlConnection("Data Source=DESKTOP-0SG48DE;Initial Catalog=KutuphaneOto;Integrated Security=True");
-            eklemeCommand = new SqlCommand("SELECT * FROM kitapListele WHERE  kitap_adi LIKE '%" + secilenK.Text  + "%'", ekleme);
+            eklemeCommand = new SqlCommand("SELECT * FROM kitapListele WHERE  kitap_adi LIKE '%" + ara.Text  + "%'", ekleme);
             adapter = new SqlDataAdapter(eklemeCommand);
             DataSet ds = new DataSet();
+            ekleme.Open();
             adapter.Fill(ds,"kitapListele");
             gridV.DataSource = ds.Tables["kitapListele"];
             ekleme.Close();
