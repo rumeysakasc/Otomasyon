@@ -25,6 +25,7 @@ namespace NküOtomasyon
             yeniKayit kyt = new yeniKayit();
             this.Hide();
             kyt.ShowDialog();
+            
         }
 
         private void label2_Click(object sender, EventArgs e)

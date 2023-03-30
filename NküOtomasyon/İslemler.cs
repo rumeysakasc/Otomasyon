@@ -180,5 +180,17 @@ namespace NküOtomasyon
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Çıkış yapmak istiyor musunuz?", "Çıkış", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Form1 form1 = new Form1();
+                this.Hide();
+                form1.ShowDialog();
+            }
+
+        }
     }
 }

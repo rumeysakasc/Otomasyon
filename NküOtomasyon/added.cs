@@ -42,6 +42,7 @@ namespace NküOtomasyon
             kYazar.Clear(); 
             baski.Clear();
             sayfa.Clear();
+           
             
             
            
@@ -117,6 +118,8 @@ namespace NküOtomasyon
         private void gorntu_Click(object sender, EventArgs e)
         {
             kitaplar();
+            clear();
+            
         }
 
         private void dataGridView2_CellEnter(object sender, DataGridViewCellEventArgs e)

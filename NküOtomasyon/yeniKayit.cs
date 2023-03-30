@@ -46,13 +46,16 @@ namespace NküOtomasyon
             kAdi.Clear();
             sifre.Clear();
             adrs.Clear();
-            
+           
+
+
         }
         private void yeniKayit_Load(object sender, EventArgs e)
         {
             kayitlar();
             clear();
             
+
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -82,6 +85,8 @@ namespace NküOtomasyon
             openFileDialog1.ShowDialog();
             foto.ImageLocation = openFileDialog1.FileName;
             foto.Text = openFileDialog1.FileName;
+            
+
 
 
         }

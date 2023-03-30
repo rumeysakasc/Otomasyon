@@ -118,6 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAALAAAACwARRqq2kAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
+        AAAC7UlEQVRIS6WVW08TQRTHV433T+D13Sef9Ct4Q4P6bvCFROheKKZp9MFtd0uLpTxgd2a3tBDZbQIV
+        FXfLg1LBhDZ8GaMfoc5/PZaUbkvBXzLJ9n9mznTOnHNGGoSqO9cVg8mayTems6Xv8WypiYFvRWhqmsfi
+        pnWNpg+PrC9c1TJ8MTFbaWX56k7RDRh3gxhzg1EMfFsrAYct8bbcnDJ5SYwrtHwwmsFG47nS3lzl45bl
+        bt5tt9snyNQDbHY1uF+orDfEqfZUgz0iUzSaybRkYWm36NVTuq6fJPlQMJd5gZEsLDeVjK2S3A3+OZxb
+        bvCMpCNjVf2x5NzSbs9JEHOEpej5KZJ6GHec06rBR8Z15wJJkRSrgSESYS+mv7tMksgW0y7PV9a3+oVF
+        Xlg4qxjWpsiotmLwNyRHAh+F8odvWsZ2QgGpmMiXm7jQUDhAt3P2S07bN8nUF+bWHyRmF1uIjCSbXMk6
+        az+iskXXa2eUNPPJ+W8x9zaZBgJfOba2LdZMiszhG8hzsnU4rvN/MG+Taxn2WUJVWp4/QXrIQedq2rpF
+        pqFBMcZnnAY2aKE6SQ9RTb5MzocfJuO0PMSq1p9M50qtcAP8ID1ENtj7SCeDxoENuOs/Rd+ScAxRhZOk
+        h4QhMlhAi48VIubV5TBEuGQ0LtI7/O8mxZUvjopLRsvN2qs7fdP0GJug2LK8tiMb/IWEfo6Wi65I9i7G
+        9OVzwvlX2uSnZlg3yNQX7vkjnUID4vFYFOXd6Ncqpubnz+9vYr0mOZJarXZKtO9tNWPvhx2PBfo5Wi5J
+        PSBcaorfeZnPXyQpEuFjBs1OyziXSPpLLMXuJecqu2i5JB0ZUU/P8SbIpvWQpG7wWKCfo+XiqCQfCubi
+        n78Sa0UYZZKjwWOBIxYqnxroioOeTNwZLlS0+gbW4L0g02DwWCim7SATcuJhR+NC4XAveIyBb8v1baQ3
+        5gjHdk/MhwFpJo48iYJBVaK3oLWgQUITdTHRScVIJOkPXEkomh0mo00AAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="kAra.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1
